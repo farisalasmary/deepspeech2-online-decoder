@@ -32,8 +32,12 @@ python decoder_server.py --host 0.0.0.0 \
 ```
 
 2. Open `js/app.js` and find the following variables and change them:<br /> 
-**ws_ip**: is the IP address of the computer that runs the`run_decoder_server.sh` script.<br /> 
-**ws_port**:is the port that you use in the`run_decoder_server.sh` script.<br /> 
+**X_seconds**: record and send data each `X_seconds` seconds.<br /> 
+```javascript
+var X_seconds = 3;
+```
+**ws_ip**: the IP address of the computer that runs the`run_decoder_server.sh` script.<br /> 
+**ws_port**: the port that you use in the`run_decoder_server.sh` script.<br /> 
 ```javascript
 var ws_ip = '0.0.0.0'
 var ws_port = '8888'
