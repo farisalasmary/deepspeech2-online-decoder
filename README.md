@@ -6,20 +6,20 @@ This project works as an extension to this [DeepSpeech2 implementation](https://
 ## Getting Started
 ### Prerequisites
 
-Since this project is an extension for  [DeepSpeech2](https://github.com/SeanNaren/deepspeech.pytorch), you need to follow the installation  instructions mentioned there.
+Since this project is an extension for  [DeepSpeech2](https://github.com/SeanNaren/deepspeech.pytorch), you need to follow the installation instructions mentioned there.
 
 ### Installing
 Simply, copy the content of this folder and paste it inside `deepspeech.pytorch` folder.
 
 ## How To Run it?
 
-I'll illustrate it on [this pretrained acoustic model](https://github.com/SeanNaren/deepspeech.pytorch/releases/download/v2.0/librispeech_pretrained_v2.pth) and [this ARPA language model](http://www.openslr.org/resources/11/3-gram.pruned.3e-7.arpa.gz). You can find other models as well [here](https://github.com/SeanNaren/deepspeech.pytorch/releases).
+I'll illustrate it on [this pretrained acoustic model](https://github.com/SeanNaren/deepspeech.pytorch/releases/download/v2.0/librispeech_pretrained_v2.pth) and [this ARPA language model](http://www.openslr.org/resources/11/3-gram.pruned.3e-7.arpa.gz). You can find other models [here](https://github.com/SeanNaren/deepspeech.pytorch/releases).
 
- You need to edit some files before you run the server application.
-1. Open the `run_decoder_server.sh` file and change the following variables:
-**--lm-path**: the path of the language model.
-**--model-path**: the path of the acoustic model.
-**--port**: the port that the server will be listening on.
+ You need to edit some files before you run the server application.<br /> 
+1. Open the `run_decoder_server.sh` file and change the following variables:<br /> 
+**--lm-path**: the path of the language model.<br /> 
+**--model-path**: the path of the acoustic model.<br /> 
+**--port**: the port that the server will be listening on.<br /> 
 ```bash
 python decoder_server.py --host 0.0.0.0 \
                          --port 8888 \
@@ -31,9 +31,9 @@ python decoder_server.py --host 0.0.0.0 \
 
 ```
 
-2. Open `js/app.js` and find the following variables and change them:
-**ws_ip**: is the IP address of the computer that runs the`run_decoder_server.sh` script.
-**ws_port**:is the port that you use in the`run_decoder_server.sh` script.
+2. Open `js/app.js` and find the following variables and change them:<br /> 
+**ws_ip**: is the IP address of the computer that runs the`run_decoder_server.sh` script.<br /> 
+**ws_port**:is the port that you use in the`run_decoder_server.sh` script.<br /> 
 ```javascript
 var ws_ip = '0.0.0.0'
 var ws_port = '8888'
@@ -53,7 +53,7 @@ Finally, run the following in different terminals:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
  Many thanks for those who made it possible for this project to be realized!
